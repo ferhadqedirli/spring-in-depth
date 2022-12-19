@@ -1,5 +1,6 @@
 package com.example.springin5steps;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,7 +8,7 @@ public class BinarySearchImpl {
 
     private final SortAlgorithm sortAlgorithm;
 
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
+    public BinarySearchImpl(@Qualifier("bubble") SortAlgorithm sortAlgorithm) {
         this.sortAlgorithm = sortAlgorithm;
     }
 
