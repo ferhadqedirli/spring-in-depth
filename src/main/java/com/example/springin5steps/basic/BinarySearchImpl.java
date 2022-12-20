@@ -7,8 +7,6 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
@@ -28,13 +26,13 @@ public class BinarySearchImpl {
         return 3;
     }
 
-    @PostConstruct//bean yaradildiqdan ve dependency ler initialize olduqdan sonra bu metodu cagirmaq ucun istifade olunur
-    public void postConstructor() {
-        LOGGER.info("post constructor");
-    }
-
-    @PreDestroy//bean context den remove olduqda cagirilir
-    public void preDestroy() {
-        LOGGER.info("pre destroy");
-    }
+//    @PostConstruct//bean yaradildiqdan ve dependency ler initialize olduqdan sonra bu metodu cagirmaq ucun istifade olunur
+//    public void postConstructor() {
+//        LOGGER.info("post constructor");
+//    }
+//
+//    @PreDestroy//bean context den remove olduqda cagirilir
+//    public void preDestroy() {
+//        LOGGER.info("pre destroy");
+//    }
 }
